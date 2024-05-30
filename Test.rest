@@ -1,1 +1,74 @@
 GET http://127.0.0.1:8000/v1/home HTTP/1.1
+
+###
+GET http://127.0.0.1:8000/v1/people HTTP/1.1
+###
+POST http://127.0.0.1:8000/v1/people/ HTTP/1.1
+Content-Type: application/json
+
+{ "first_name": "Name1", "last_name":"Last name2", "email":"example1@gmail.com", "telephone":"0553009564","marital_status":"single" }
+
+###
+GET http://127.0.0.1:8000/v1/people/35 HTTP/1.1
+
+###
+DELETE  http://127.0.0.1:8000/v1/people/ HTTP/1.1
+Content-Type: application/json
+
+{ "id": 38}
+
+###
+PATCH  http://127.0.0.1:8000/v1/people/ HTTP/1.1
+Content-Type: application/json
+
+{ "mustard_seed":1, "id":40}
+
+
+
+### Ministry
+
+POST http://127.0.0.1:8000/v1/ministries/ HTTP/1.1
+Content-Type: application/json
+
+{ "name": "Ministry 3"}
+
+###
+GET http://127.0.0.1:8000/v1/ministries/ HTTP/1.1
+
+###
+GET http://127.0.0.1:8000/v1/ministries/1 HTTP/1.1
+
+###
+
+PATCH http://127.0.0.1:8000/v1/ministries/ HTTP/1.1
+Content-Type: application/json
+
+{ "name": "Ministry  modified", "id": 1}
+
+###
+DELETE http://127.0.0.1:8000/v1/ministries/ HTTP/1.1
+Content-Type: application/json
+
+{ "id": 4 }
+
+
+### Mustard Seed
+GET http://127.0.0.1:8000/v1/mustardseeds HTTP/1.1
+
+###
+POST http://127.0.0.1:8000/v1/mustardseeds HTTP/1.1
+Content-Type: application/json
+
+{ "name": "Mustard Seed 2", "location": "AU-0005-500" }
+
+###
+PATCH http://127.0.0.1:8000/v1/mustardseeds HTTP/1.1
+Content-Type: application/json
+
+{ "location": "AU-0005-4139", "id":1 }
+
+###
+DELETE http://127.0.0.1:8000/v1/mustardseeds HTTP/1.1
+Content-Type: application/json
+
+{ "location": "AU-0005-4139", "id":2 }
